@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Live Timer</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Clock Timer</title>
+  <style>
+    #timer {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: darkblue;
+    }
+  </style>
 </head>
 <body>
-  <!-- Place where time will display -->
-  <div id="timer"></div>
+  <p id="timer"></p>
 
-  <script type="text/javascript" src="./script.js"></script>
+  <script>
+    function updateTimer() {
+      let now = new Date();
+      // Format the date and time
+      let dateTime = now.toLocaleString(); 
+      document.getElementById("timer").innerText = dateTime;
+    }
+
+    // Call immediately so the user sees time instantly
+    updateTimer();
+
+    // Update every second
+    setInterval(updateTimer, 1000);
+  </script>
 </body>
 </html>
