@@ -1,3 +1,4 @@
+<script>
 document.addEventListener("DOMContentLoaded", function() {
     let timeDisplay = document.getElementById("timer");
 
@@ -6,3 +7,4 @@ document.addEventListener("DOMContentLoaded", function() {
         timeDisplay.innerHTML = currentDate.toLocaleString();
     }, 1000);
 });
+</script>
