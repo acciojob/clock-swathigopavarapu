@@ -1,9 +1,6 @@
-let timeDisply = document.getElementById("timer");
-let currentDate = new Date();
-setInterval(
-function()
-{
-currentDate = new Date();
-timeDispaly.innerHTML =currentDate.toLocaleString();
-},1000
-)
+let timeDisplay = document.getElementById("timer"); // ✅ consistent variable name
+
+setInterval(function () {
+  let currentDate = new Date();
+  timeDisplay.innerHTML = currentDate.toLocaleString();
+}, 1000);
