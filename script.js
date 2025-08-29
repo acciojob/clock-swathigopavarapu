@@ -1,6 +1,10 @@
-let timeDisplay = document.getElementById("timer"); // ✅ consistent variable name
+function updateTimer() {
+      let currentDate = new Date();
+      document.getElementById("timer").innerHTML = currentDate.toLocaleString();
+    }
 
-setInterval(function () {
-  let currentDate = new Date();
-  timeDisplay.innerHTML = currentDate.toLocaleString();
-}, 1000);
+    // update immediately when page loads
+    updateTimer();
+
+    // update every second
+    setInterval(updateTimer, 1000);
